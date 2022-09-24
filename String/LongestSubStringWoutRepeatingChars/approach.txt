@@ -1,0 +1,11 @@
+here I have used a map to see whether the character exists in the current substring or not
+i will be the starting point of a substring, j will be the ending point
+1. if the character is not inside the map as a key, then put the charactert and corresponding index inside the map
+2. if found in map then take it's last found position in a temp variable
+    - then remove all characters who are present in the map as key between i & temp(inclusive)
+      (upper step is needed as these characters are not inside the upcoming window so they should be removed from map)
+    - update i as temp + 1
+    - then put that character and current index in the map
+3. for both of these cases, update maxLength
+Think for these test cases
+bbbb, abcdabcde, abccba, dvdw
